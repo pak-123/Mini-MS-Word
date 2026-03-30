@@ -45,8 +45,6 @@
             <div class="tool-group">
                 <button id="plus" title="Increase Font Size">A+</button>
                 <button id="minus" title="Decrease Font Size">A-</button>
-                <label for="fontSizeSlider">Font Size:</label>
-                <input type="range" id="fontSizeSlider" min="0.5" max="3" step="0.1">
             </div>
 
             <!-- style-->
@@ -78,20 +76,11 @@
                 <button id="paste" title="Paste Text">Paste</button>
             </div>
 
-
-            <!-- ordered and unordered list -->
-            <div class="tool-group">
-                <button id="ulBtn">Unordered</button>
-            </div>
-            <div class="tool-group">
-                <button id="olBtn">Ordered</button>
-            </div>
-
         </div>
 
         <!-- editor-->
         <div id="editor" contenteditable="true">
-            <p>Type something...</p>
+            <p id="para"></p>
         </div>
     </div>
 

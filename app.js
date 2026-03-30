@@ -111,26 +111,7 @@ cutBtn.addEventListener("click", () => {
 });
 
 pasteBtn.addEventListener("click", () => {
-      alert("Use Ctrl+V (Cmd+V on Mac) to paste text into the editor.");
-});
-
-
-// unordered list
-bulletBtn.addEventListener("click", () => {
-      editor.focus();
-      document.execCommand("insertUnorderedList");
-});
-
-// ordered list
-numberedBtn.addEventListener("click", () => {
-      editor.focus();
-      document.execCommand("insertOrderedList");
-});
-
-
-// font size range 
-slider.addEventListener("input", () => {
-      editor.style.fontSize = slider.value + "em";
+      alert("Use Ctrl+V to paste text into the editor.");
 });
 
 

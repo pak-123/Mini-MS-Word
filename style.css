@@ -114,7 +114,7 @@ input[type="range"] {
 
 /* Editor */
 #editor {
-    min-height: 400px;
+    min-height: 430px;
     padding: 15px;
     outline: none;
     font-size: 16px;
@@ -127,25 +127,6 @@ input[type="range"] {
 /* Editor Focus */
 #editor:focus {
     background: #fffaf5;
-}
-
-/* Ordered & Unordered lists */
-#editor ul {
-    margin-left: 20px;
-    list-style-type: disc;
-}
-
-#editor ol {
-    margin-left: 20px;
-    list-style-type: decimal;
-}
-
-/* Word Count */
-#wordCount {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #555;
-    text-align: right;
 }
 
 /* Dark Mode Styles */
@@ -181,7 +162,6 @@ body.dark-mode select {
     color: #fff;
     border: 1px solid #888;
 }
-
 
 
 /* responsive  */
