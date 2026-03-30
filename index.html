@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini MS Word</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main-container">
+
+        <!-- header -->
+        <header class="header">
+            <div class="header-center">
+                <img src="logo.png" alt="Logo" class="logo">
+                <h1>Mini MS Word</h1>
+                <button id="toggleMode" title="Toggle Dark/Light Mode">🌙</button>
+            </div>
+            <p>Your Smart Text Editor</p>
+        </header>
+
+        <!-- toolbar -->
+        <div class="toolbar">
+
+            <!-- font section -->
+            <div class="tool-group">
+                <select id="font" title="Select Font">
+                    <option value="Arial">Arial</option>
+                    <option value="Calibri">Calibri</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Trebuchet MS">Trebuchet MS</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Lucida Console">Lucida Console</option>
+                    <option value="Impact">Impact</option>
+                </select>
+            </div>
+
+            <!-- font size -->
+            <div class="tool-group">
+                <button id="plus" title="Increase Font Size">A+</button>
+                <button id="minus" title="Decrease Font Size">A-</button>
+                <label for="fontSizeSlider">Font Size:</label>
+                <input type="range" id="fontSizeSlider" min="0.5" max="3" step="0.1">
+            </div>
+
+            <!-- style-->
+            <div class="tool-group">
+                <button id="bold" title="Bold"><b>B</b></button>
+                <button id="italic" title="Italic"><i>I</i></button>
+                <button id="underline" title="Underline"><u>U</u></button>
+            </div>
+
+            <!-- alignment-->
+            <div class="tool-group">
+                <button id="left" title="Align Left">⬅</button>
+                <button id="center" title="Align Center">↔</button>
+                <button id="right" title="Align Right">➡</button>
+                <button id="justify" title="Justify">☰</button>
+            </div>
+
+            <!-- colors-->
+            <div class="tool-group">
+                <input type="color" id="colorpicker" title="Text Color">
+                <input type="color" id="bgcolor" title="Background Color">
+            </div>
+
+            <!-- actions -->
+            <div class="tool-group">
+                <button id="clear" title="Clear Editor">Clear</button>
+                <button id="copy" title="Copy Selected Text">Copy</button>
+                <button id="cut" title="Cut Selected Text">Cut</button>
+                <button id="paste" title="Paste Text">Paste</button>
+                <button id="bullet" title="Bullet List">Unordered</button>
+                <button id="numbered" title="Numbered List">Ordered</button>
+
+            </div>
+
+        </div>
+
+        <!-- editor-->
+        <div id="editor" contenteditable="true">
+            <p>Type something...</p>
+        </div>
+
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
