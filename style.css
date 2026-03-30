@@ -181,3 +181,13 @@ body.dark-mode select {
     color: #fff;
     border: 1px solid #888;
 }
+
+
+
+/* responsive  */
+/* Small screens */
+@media (max-width: 480px) {
+    .toolbar {
+        justify-content: flex-start;
+    }
+}

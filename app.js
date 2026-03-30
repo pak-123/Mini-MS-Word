@@ -32,109 +32,109 @@ let size = 1;
 
 // font increase
 plus.addEventListener("click", () => {
-    size += 0.1;
-    editor.style.fontSize = size + "em";
+      size += 0.1;
+      editor.style.fontSize = size + "em";
 });
 
 // font decrease
 minus.addEventListener("click", () => {
-    size -= 0.1;
-    if (size < 0.5) size = 0.5;
-    editor.style.fontSize = size + "em";
+      size -= 0.1;
+      if (size < 0.5) size = 0.5;
+      editor.style.fontSize = size + "em";
 });
 
 // bold
 bold.addEventListener("click", () => {
-    editor.style.fontWeight = "bold";
+      editor.style.fontWeight = "bold";
 });
 
 // underline
 underline.addEventListener("click", () => {
-    editor.style.textDecoration = "underline";
+      editor.style.textDecoration = "underline";
 });
 
 // italic
 italic.addEventListener("click", () => {
-    editor.style.fontStyle = "italic";
+      editor.style.fontStyle = "italic";
 });
 
 // clear
 clear.addEventListener("click", () => {
-    editor.innerHTML = "";
+      editor.innerHTML = "";
 });
 
 // text color
 colorpicker.addEventListener("input", () => {
-    editor.style.color = colorpicker.value;
+      editor.style.color = colorpicker.value;
 });
 
 // font change
-font.addEventListener('click', ()=>{
-    para.style.fontFamily = font.value;
+font.addEventListener('click', () => {
+      para.style.fontFamily = font.value;
 });
 
 // background color
 bgcolor.addEventListener("input", () => {
-    editor.style.backgroundColor = bgcolor.value;
+      editor.style.backgroundColor = bgcolor.value;
 });
 
 // alignment
 left.addEventListener("click", () => {
-    editor.style.textAlign = "left";
+      editor.style.textAlign = "left";
 });
 
 // center
 center.addEventListener("click", () => {
-    editor.style.textAlign = "center";
+      editor.style.textAlign = "center";
 });
 
 // right
 right.addEventListener("click", () => {
-    editor.style.textAlign = "right";
+      editor.style.textAlign = "right";
 });
 
 // justify
 justify.addEventListener("click", () => {
-    editor.style.textAlign = "justify";
+      editor.style.textAlign = "justify";
 });
 
 
 // copy cut paste
 copyBtn.addEventListener("click", () => {
-    editor.focus(); 
-    document.execCommand("copy"); 
+      editor.focus();
+      document.execCommand("copy");
 });
 
 cutBtn.addEventListener("click", () => {
-    editor.focus();
-    document.execCommand("cut"); 
+      editor.focus();
+      document.execCommand("cut");
 });
 
 pasteBtn.addEventListener("click", () => {
-    alert("Use Ctrl+V (Cmd+V on Mac) to paste text into the editor.");
+      alert("Use Ctrl+V (Cmd+V on Mac) to paste text into the editor.");
 });
 
 
 // unordered list
 bulletBtn.addEventListener("click", () => {
-    editor.focus();
-    document.execCommand("insertUnorderedList");
+      editor.focus();
+      document.execCommand("insertUnorderedList");
 });
 
 // ordered list
 numberedBtn.addEventListener("click", () => {
-    editor.focus();
-    document.execCommand("insertOrderedList");
+      editor.focus();
+      document.execCommand("insertOrderedList");
 });
 
 
 // font size range 
 slider.addEventListener("input", () => {
-    editor.style.fontSize = slider.value + "em";
+      editor.style.fontSize = slider.value + "em";
 });
 
 
 // toggle btn
 toggleMode.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
+      document.body.classList.toggle("dark-mode");
 });

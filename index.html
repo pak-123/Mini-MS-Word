@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini MS Word</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -75,9 +76,15 @@
                 <button id="copy" title="Copy Selected Text">Copy</button>
                 <button id="cut" title="Cut Selected Text">Cut</button>
                 <button id="paste" title="Paste Text">Paste</button>
-                <button id="bullet" title="Bullet List">Unordered</button>
-                <button id="numbered" title="Numbered List">Ordered</button>
+            </div>
 
+
+            <!-- ordered and unordered list -->
+            <div class="tool-group">
+                <button id="ulBtn">Unordered</button>
+            </div>
+            <div class="tool-group">
+                <button id="olBtn">Ordered</button>
             </div>
 
         </div>
@@ -86,8 +93,6 @@
         <div id="editor" contenteditable="true">
             <p>Type something...</p>
         </div>
-
-
     </div>
 
     <script src="app.js"></script>
