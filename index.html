@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini MS Word</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         <!-- header -->
         <header class="header">
             <div class="header-center">
-                <img src="logo.png" alt="Logo" class="logo">
+                <img src="./images/logo.png" alt="Logo" class="logo">
                 <h1>Mini MS Word</h1>
                 <button id="toggleMode" title="Toggle Dark/Light Mode">🌙</button>
             </div>
@@ -27,21 +27,50 @@
 
             <!-- font section -->
             <div class="tool-group">
-                <select id="font" title="Select Font">
+                <select id="fonts" title="Select Font">
                     <option value="Arial">Arial</option>
                     <option value="Calibri">Calibri</option>
+                    <option value="Forte">Forte</option>
                     <option value="Times New Roman">Times New Roman</option>
                     <option value="Verdana">Verdana</option>
+                    <option value="Palace Script MT">Palace Script MT</option>
                     <option value="Georgia">Georgia</option>
+                    <option value="Stencil">Stencil</option>
+                    <option value="Franklin Gothic Heavy">Franklin Gothic Heavy</option>
                     <option value="Courier New">Courier New</option>
                     <option value="Trebuchet MS">Trebuchet MS</option>
+                    <option value="Bernard MT Condensed">Bernard MT Condensed</option>
                     <option value="Tahoma">Tahoma</option>
                     <option value="Lucida Console">Lucida Console</option>
                     <option value="Impact">Impact</option>
+                    <option value="Engravers MT">Engravers MT</option>
+                    <option value="Cooper Black">Cooper Black</option>
+                    <option value="Algerian">Algerian</option>
+                    <option value="Freestyle Script">Freestyle Script</option>
                 </select>
             </div>
 
             <!-- font size -->
+
+            <select id="sizing" title="Select Size">
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                <option value="20">20</option>
+                <option value="22">22</option>
+                <option value="24">24</option>
+                <option value="26">26</option>
+                <option value="28">28</option>
+                <option value="36">36</option>
+                <option value="48">48</option>
+                <option value="72">72</option>
+            </select>
+
             <div class="tool-group">
                 <button id="plus" title="Increase Font Size">A+</button>
                 <button id="minus" title="Decrease Font Size">A-</button>
@@ -56,35 +85,48 @@
 
             <!-- alignment-->
             <div class="tool-group">
-                <button id="left" title="Align Left">⬅</button>
-                <button id="center" title="Align Center">↔</button>
-                <button id="right" title="Align Right">➡</button>
-                <button id="justify" title="Justify">☰</button>
+                <div class="align-btns">
+                    <button id="left" title="Align Left"><img src="./images/left.png" alt=""></button>
+                    <button id="center" title="Align Center"><img src="./images/center.png" alt=""></button>
+                    <button id="right" title="Align Right"><img src="./images/right.png" alt=""></button>
+                    <button id="justify" title="Justify"><img src="./images/justify.png" alt=""></button>
+                </div>
             </div>
 
             <!-- colors-->
             <div class="tool-group">
+                <img src="./images/colorA.png" id="picker" class="letter">
                 <input type="color" id="colorpicker" title="Text Color">
+                <img src="./images/paint-bucket.png" id="paint" class="bucket">
                 <input type="color" id="bgcolor" title="Background Color">
+            </div>
+
+            <!-- bullet list -->
+            <div class="tool-group">
+                <button id="bullet" title="Bullet List"><img src="./images/bullet.png" alt=""></button>
+            </div>
+
+            <!-- numbered list -->
+            <div class="tool-group">
+                <button id="numbered" title="Numbered List"><img src="./images/numbered.png" alt=""></button>
             </div>
 
             <!-- actions -->
             <div class="tool-group">
-                <button id="clear" title="Clear Editor">Clear</button>
                 <button id="copy" title="Copy Selected Text">Copy</button>
                 <button id="cut" title="Cut Selected Text">Cut</button>
                 <button id="paste" title="Paste Text">Paste</button>
             </div>
-
         </div>
 
+  
         <!-- editor-->
         <div id="editor" contenteditable="true">
             <p id="para"></p>
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>

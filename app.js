@@ -13,7 +13,7 @@ let right = document.getElementById("right");
 let justify = document.getElementById("justify");
 
 let colorpicker = document.getElementById("colorpicker");
-let font = document.getElementById("font");
+let fonts = document.getElementById("fonts");
 let bgcolor = document.getElementById("bgcolor");
 
 let copyBtn = document.getElementById("copy");
@@ -22,9 +22,6 @@ let pasteBtn = document.getElementById("paste");
 
 let bulletBtn = document.getElementById("bullet");
 let numberedBtn = document.getElementById("numbered");
-
-let slider = document.getElementById("fontSizeSlider");
-let fontSizeValue = document.getElementById("fontSizeValue");
 
 let toggleMode = document.getElementById("toggleMode");
 
@@ -43,6 +40,11 @@ minus.addEventListener("click", () => {
       editor.style.fontSize = size + "em";
 });
 
+// font size change
+sizing.addEventListener("click", () => {
+      editor.style.fontSize = sizing.value + "px";
+})
+
 // bold
 bold.addEventListener("click", () => {
       editor.style.fontWeight = "bold";
@@ -58,19 +60,14 @@ italic.addEventListener("click", () => {
       editor.style.fontStyle = "italic";
 });
 
-// clear
-clear.addEventListener("click", () => {
-      editor.innerHTML = "";
-});
-
 // text color
 colorpicker.addEventListener("input", () => {
       editor.style.color = colorpicker.value;
 });
 
 // font change
-font.addEventListener('click', () => {
-      para.style.fontFamily = font.value;
+fonts.addEventListener('change', () => {
+      editor.style.fontFamily = fonts.value;
 });
 
 // background color
@@ -98,24 +95,35 @@ justify.addEventListener("click", () => {
       editor.style.textAlign = "justify";
 });
 
-
-// copy cut paste
+// copy
 copyBtn.addEventListener("click", () => {
       editor.focus();
       document.execCommand("copy");
 });
 
+// cut
 cutBtn.addEventListener("click", () => {
       editor.focus();
       document.execCommand("cut");
 });
 
+// paste
 pasteBtn.addEventListener("click", () => {
       alert("Use Ctrl+V to paste text into the editor.");
 });
 
-
 // toggle btn
 toggleMode.addEventListener("click", () => {
       document.body.classList.toggle("dark-mode");
+});
+
+
+// bullet list
+bulletBtn.addEventListener("click", () => {
+      document.execCommand("insertUnorderedList");
+});
+
+// numbered list
+numberedBtn.addEventListener("click", () => {
+      document.execCommand("insertOrderedList");
 });
